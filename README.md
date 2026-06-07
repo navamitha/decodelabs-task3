@@ -49,8 +49,9 @@ SELECT * FROM project3 LIMIT 10;
 
 SELECT OrderID, Product, Quantity, TotalPrice, OrderStatus
 FROM project3;
-2. WHERE — Filter Data
-sqlSELECT * FROM project3
+
+2. WHERE — Filter Datasql
+SELECT * FROM project3
 WHERE OrderStatus = 'Delivered';
 
 SELECT * FROM project3
