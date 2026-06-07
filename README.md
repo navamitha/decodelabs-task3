@@ -44,8 +44,8 @@ PropertyDetailsDatabasedecodelabsTable Nameproject3Total Records1,200 rowsTotal 
 Column NameData TypeDescriptionOrderIDTEXTUnique order identifierDateTEXTDate of the orderCustomerIDTEXTUnique customer identifierProductTEXTProduct nameQuantityINTNumber of items orderedUnitPriceDOUBLEPrice per unitShippingAddressTEXTDelivery addressPaymentMethodTEXTMode of paymentOrderStatusTEXTCurrent order statusTrackingNumberTEXTShipment tracking IDItemsInCartINTTotal items in cartCouponCodeTEXTDiscount coupon appliedReferralSourceTEXTSource of customer referralTotalPriceDOUBLEFinal order total
 
 🔍 Queries Executed
-1. SELECT — View Data
-sqlSELECT * FROM project3 LIMIT 10;
+1. SELECT — View Datasql
+SELECT * FROM project3 LIMIT 10;
 
 SELECT OrderID, Product, Quantity, TotalPrice, OrderStatus
 FROM project3;
@@ -59,40 +59,45 @@ WHERE TotalPrice > 2000;
 SELECT * FROM project3
 WHERE Product = 'Laptop'
 AND OrderStatus = 'Shipped';
-3. ORDER BY — Sort Data
-sqlSELECT OrderID, Product, TotalPrice
+
+3. ORDER BY — Sort Datasql
+SELECT OrderID, Product, TotalPrice
 FROM project3
 ORDER BY TotalPrice DESC;
 
 SELECT OrderID, Product, TotalPrice
 FROM project3
 ORDER BY TotalPrice ASC;
-4. GROUP BY — Group Data
-sqlSELECT Product, COUNT(*) AS TotalOrders
+
+4. GROUP BY — Group Datasql
+SELECT Product, COUNT(*) AS TotalOrders
 FROM project3
 GROUP BY Product;
 
 SELECT OrderStatus, COUNT(*) AS TotalOrders
 FROM project3
 GROUP BY OrderStatus;
-5. COUNT — Count Records
-sqlSELECT COUNT(*) AS TotalOrders
+
+5. COUNT — Count Recordssql
+SELECT COUNT(*) AS TotalOrders
 FROM project3;
 
 SELECT Product, COUNT(*) AS TotalOrders
 FROM project3
 GROUP BY Product
 ORDER BY TotalOrders DESC;
-6. SUM — Total Revenue
-sqlSELECT SUM(TotalPrice) AS TotalRevenue
+
+6. SUM — Total Revenuesql
+SELECT SUM(TotalPrice) AS TotalRevenue
 FROM project3;
 
 SELECT Product, SUM(TotalPrice) AS TotalRevenue
 FROM project3
 GROUP BY Product
 ORDER BY TotalRevenue DESC;
-7. AVG — Average Values
-sqlSELECT AVG(TotalPrice) AS AvgOrderValue
+
+7. AVG — Average Valuessql
+SELECT AVG(TotalPrice) AS AvgOrderValue
 FROM project3;
 
 SELECT Product, AVG(TotalPrice) AS AvgOrderValue
